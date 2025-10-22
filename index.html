@@ -230,7 +230,62 @@
         </div>
     </div>
 
-    <!-- QUI INSERIREMO IL CODICE BOTPRESS AL PASSO 7 -->
+
+<script src="https://cdn.botpress.cloud/webchat/v3.3/inject.js"></script>
+<style>
+  #webchat .bpWebchat {
+    position: unset;
+    width: 100%;
+    height: 100%;
+    max-height: 100%;
+    max-width: 100%;
+  }
+
+  #webchat .bpFab {
+    display: none;
+  }
+</style>
+
+<!-- Put this on your page BEFORE the script below -->
+<div id="webchat" style="width: 500px; height: 500px;"></div>
+
+<!-- In your <body> tag -->
+<script>
+  window.botpress.on("webchat:ready", () => {
+    window.botpress.open();
+  });
+  window.botpress.init({
+  "botId": "9281d834-3d32-44dc-a7bd-7f61056b7257",
+  "configuration": {
+    "version": "v2",
+    "botName": "Marvin CV Assistant",
+    "botAvatar": "https://files.bpcontent.cloud/2025/10/22/17/20251022172836-4TW3W0UP.png",
+    "botDescription": "👋 Benvenuto!\nSono l’assistente virtuale di Marvin Di Vincenzi, Data Analyst junior.\nPuoi chiedermi tutte le informazioni sulla sua esperienza, le competenze tecniche, la formazione e i progetti svolti.\nSe desideri vedere i link dei lavori o delle dashboard realizzate, chiedi pure!\nRispondo sempre in italiano in modo professionale e chiaro.",
+    "fabImage": "https://files.bpcontent.cloud/2025/10/22/17/20251022172606-XJF25GA4.png",
+    "website": {},
+    "email": {},
+    "phone": {},
+    "termsOfService": {},
+    "privacyPolicy": {},
+    "color": "#8e4ec6",
+    "variant": "solid",
+    "headerVariant": "glass",
+    "themeMode": "dark",
+    "fontFamily": "inter",
+    "radius": 4,
+    "feedbackEnabled": false,
+    "footer": "[⚡ by Botpress](https://botpress.com/?from=webchat)",
+    "soundEnabled": false,
+    "proactiveMessageEnabled": false,
+    "proactiveBubbleMessage": "Hi! 👋 Need help?",
+    "proactiveBubbleTriggerType": "afterDelay",
+    "proactiveBubbleDelayTime": 10
+  },
+  "clientId": "e2877abc-8e89-427f-a3f5-9682910058d5",
+  "selector": "#webchat"
+});
+</script>
+
 
 </body>
 </html>
