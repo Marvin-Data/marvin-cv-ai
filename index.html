@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marvin Di Vincenzi - Data Analyst</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            overflow: hidden;
+        }
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        .header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        .content {
+            padding: 40px;
+        }
+        .section {
+            margin-bottom: 30px;
+        }
+        .section h2 {
+            color: #667eea;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+        }
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        .contact-item {
+            flex: 1;
+            min-width: 200px;
+        }
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+        }
+        .skill-item {
+            background: #f4f4f4;
+            padding: 15px;
+            border-radius: 5px;
+            border-left: 4px solid #667eea;
+        }
+        .project {
+            background: #f9f9f9;
+            padding: 20px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            border-left: 4px solid #764ba2;
+        }
+        .project h3 {
+            color: #764ba2;
+            margin-bottom: 10px;
+        }
+        .ai-assistant-notice {
+            background: #fff3cd;
+            border: 2px solid #ffc107;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .ai-assistant-notice h3 {
+            color: #856404;
+            margin-bottom: 10px;
+        }
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2em;
+            }
+            .content {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>MARVIN DI VINCENZI</h1>
+            <p>Data Analyst Junior | Python Developer</p>
+        </div>
+
+        <div class="content">
+            <div class="ai-assistant-notice">
+                <h3>💬 Hai domande sul mio profilo?</h3>
+                <p>Usa l'assistente AI in basso a destra per chiedere informazioni sulla mia esperienza, competenze e progetti!</p>
+            </div>
+
+            <div class="section">
+                <h2>📞 Contatti</h2>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <strong>Telefono:</strong> +39 393 220 3067
+                    </div>
+                    <div class="contact-item">
+                        <strong>Email:</strong> marvin.divincenzi@gmail.com
+                    </div>
+                    <div class="contact-item">
+                        <strong>Località:</strong> Roma / Macerata, Italia
+                    </div>
+                    <div class="contact-item">
+                        <strong>LinkedIn:</strong> <a href="#" style="color: #667eea;">Profilo LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>👨‍💼 Profilo</h2>
+                <p>Data Analyst junior con background operativo nel retail e formazione in Python, SQL e Business Intelligence. Esperienza in data cleaning, analisi vendite, forecasting e sviluppo di dashboard interattive per supportare decisioni di business. Cerco ruoli in cui applicare competenze tecniche e contribuire a progetti data-driven.</p>
+            </div>
+
+            <div class="section">
+                <h2>💻 Competenze Principali</h2>
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <strong>Python</strong><br>
+                        pandas, numpy, Jupyter, matplotlib<br>
+                        <em>Livello: Intermedio</em>
+                    </div>
+                    <div class="skill-item">
+                        <strong>SQL</strong><br>
+                        MySQL<br>
+                        <em>Livello: Intermedio</em>
+                    </div>
+                    <div class="skill-item">
+                        <strong>Data Analysis</strong><br>
+                        Data cleaning, EDA, feature engineering
+                    </div>
+                    <div class="skill-item">
+                        <strong>Visualizzazione</strong><br>
+                        Tableau, Power BI<br>
+                        <em>Livello: Buono/Intermedio</em>
+                    </div>
+                    <div class="skill-item">
+                        <strong>Time Series</strong><br>
+                        Forecasting<br>
+                        <em>Livello: Base/Intermedio</em>
+                    </div>
+                    <div class="skill-item">
+                        <strong>Altri Strumenti</strong><br>
+                        Excel, Git, Canva
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>🚀 Progetti</h2>
+                
+                <div class="project">
+                    <h3>Forecasting Produzione Energetica (Progetto finale — Aulab)</h3>
+                    <p><strong>Dataset:</strong> Dati EEA su emissioni e produzione di energia rinnovabile (Europa/Italia)</p>
+                    <p><strong>Attività:</strong> Pulizia dati, EDA, analisi temporale, creazione di visualizzazioni e dashboard previsionali</p>
+                    <p><strong>Strumenti:</strong> Python (pandas, numpy, Jupyter, matplotlib, statsmodels), Canva</p>
+                </div>
+
+                <div class="project">
+                    <h3>Analisi Vendite PRESTO.IT (Progetto Aulab)</h3>
+                    <p><strong>Attività:</strong> Interrogazioni SQL, analisi vendite, identificazione top products, definizione KPI, dashboard Tableau Public</p>
+                    <p><strong>Strumenti:</strong> SQL (MySQL), Tableau Public</p>
+                </div>
+
+                <div class="project">
+                    <h3>Analisi Accessi e Performance Territoriali — ASL Firenze</h3>
+                    <p><strong>Attività:</strong> Integrazione dataset operativi, pseudonimizzazione, KPI territoriali, visualizzazioni geospaziali</p>
+                    <p><strong>Strumenti:</strong> Excel, Tableau/Power BI, tecniche di data pseudonymization</p>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>🎓 Formazione</h2>
+                <p><strong>Corso Data Analyst</strong> — Aulab S.r.l. (02/2025 – 06/2025)<br>
+                Certificazione: Attestato Data Analyst con progetto finale</p>
+                <p><strong>Diploma di Ragioniere e Perito Commerciale</strong> — Istituto Kennedy, Frascati (07/2012)</p>
+            </div>
+
+            <div class="section">
+                <h2>💼 Esperienza</h2>
+                <p><strong>Addetto alle Vendite</strong> — Elite Nomentana S.r.l. (GDO) | 07/2014 – 10/2024</p>
+                <ul style="margin-left: 20px; margin-top: 10px;">
+                    <li>Raccolta, gestione e analisi dati vendita/magazzino con Excel, reportistica settimanale</li>
+                    <li>Ottimizzazione assortimenti: <strong>+22,4% fatturato</strong></li>
+                    <li>Formazione/onboarding nuovi collaboratori e monitoraggio KPI performance</li>
+                    <li>Coordinamento fornitori e gestione ordini, miglioramento flussi e accuratezza dati</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>🌍 Lingue</h2>
+                <p><strong>Italiano:</strong> Madrelingua<br>
+                <strong>Inglese:</strong> Base (in corso di miglioramento)</p>
+            </div>
+
+            <div class="section">
+                <h2>✅ Disponibilità</h2>
+                <p>Contratti full-time o part-time<br>
+                Disponibilità a trasferte e mobilità</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- QUI INSERIREMO IL CODICE BOTPRESS AL PASSO 7 -->
+
+</body>
+</html>
