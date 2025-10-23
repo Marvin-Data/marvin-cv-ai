@@ -22,22 +22,43 @@
             margin: 0 auto;
             background: white;
             border-radius: 10px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            box-shadow: 0 10px 40px rgba(0,0,0,0.15);
             overflow: hidden;
         }
         .header {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
-            padding: 40px;
+            padding: 36px 40px 18px 40px;
             text-align: center;
+            border-radius: 10px 10px 0 0;
+        }
+        .header img.avatar {
+            width: 120px;
+            border-radius: 50%;
+            box-shadow: 0 4px 14px #764ba230;
+            margin-bottom: 18px;
+            object-fit: cover;
+            border: 3px solid #ffe077;
+        }
+        .header img.hero {
+            width:95%;
+            max-width:420px;
+            border-radius:24px;
+            box-shadow:0 2px 14px #764ba250;
+            margin-bottom:18px;
         }
         .header h1 {
-            font-size: 2.5em;
+            font-size: 2.2em;
+            margin-bottom: 10px;
+        }
+        .header h3 {
+            font-size: 1.22em;
+            opacity: 0.93;
             margin-bottom: 10px;
         }
         .header p {
-            font-size: 1.2em;
-            opacity: 0.9;
+            color: #ffe077;
+            font-size: 1.08em;
         }
         .content {
             padding: 40px;
@@ -83,6 +104,22 @@
             color: #764ba2;
             margin-bottom: 10px;
         }
+        .project a {
+            display: inline-block;
+            background:#764BA2;
+            color:white;
+            padding:8px 18px;
+            border-radius:6px;
+            text-decoration:none;
+            margin-right:6px;
+            margin-bottom: 8px;
+            font-weight: 500;
+            transition: 0.25s box-shadow;
+        }
+        .project a:hover {
+            box-shadow:0 0 8px #764BA2;
+            background:#8f60cc;
+        }
         .ai-assistant-notice {
             background: #fff3cd;
             border: 2px solid #ffc107;
@@ -95,26 +132,40 @@
             color: #856404;
             margin-bottom: 10px;
         }
+        .skill-graphic {
+            text-align: center;
+            margin-bottom: 16px;
+        }
+        .skill-graphic img {
+            width: 180px;
+            border-radius: 16px;
+            box-shadow: 0 1px 10px #764ba240;
+            margin-bottom: 8px;
+        }
         @media (max-width: 768px) {
             .header h1 {
                 font-size: 2em;
             }
             .content {
-                padding: 20px;
+                padding: 18px;
+            }
+            .header {
+                padding: 20px 10px 8px 10px;
             }
         }
     </style>
 </head>
 <body>
     <div class="container">
-       <div class="header" style="text-align:center;">
-  <img src="https://github.com/Marvin-Data/marvin-cv-ai/raw/main/marvin%20curiculum%20-%20Copia.JPG" 
-       alt="Foto Marvin Di Vincenzi" 
-       style="width:150px; border-radius:50%; box-shadow:0 4px 14px #764ba230; margin-bottom:18px; object-fit:cover;">
-  <h1>MARVIN DI VINCENZI</h1>
-  <p>Data Analyst Junior | Python Developer</p>
-</div>
-
+       <div class="header">
+            <img src="https://github.com/Marvin-Data/marvin-cv-ai/raw/main/marvin%20curiculum%20-%20Copia.JPG" 
+                alt="Foto Marvin Di Vincenzi" class="avatar">
+            <img src="https://github.com/Marvin-Data/marvin-cv-ai/raw/main/uomo%20al%20pc.png" 
+                alt="Data Analyst al PC" class="hero">
+            <h1>MARVIN DI VINCENZI</h1>
+            <h3>Data Analyst Junior • Python Developer</h3>
+            <p>Soluzioni data-driven per aziende e business</p>
+        </div>
 
         <div class="content">
             <div class="ai-assistant-notice">
@@ -129,7 +180,7 @@
                         <strong>Telefono:</strong> +39 393 220 3067
                     </div>
                     <div class="contact-item">
-                        <strong>Email:</strong> marvin.divincenzi@gmail.com
+                        <strong>Email:</strong> <a href="mailto:marvin.divincenzi@gmail.com" style="color:#667eea;">marvin.divincenzi@gmail.com</a>
                     </div>
                     <div class="contact-item">
                         <strong>Località:</strong> Roma / Macerata, Italia
@@ -147,6 +198,9 @@
 
             <div class="section">
                 <h2>💻 Competenze Principali</h2>
+                <div class="skill-graphic">
+                    <img src="https://github.com/Marvin-Data/marvin-cv-ai/raw/main/grafici.png" alt="Competenze Data Analyst">
+                </div>
                 <div class="skills-grid">
                     <div class="skill-item">
                         <strong>Python</strong><br>
@@ -181,20 +235,21 @@
 
             <div class="section">
                 <h2>🚀 Progetti</h2>
-                
                 <div class="project">
                     <h3>Forecasting Produzione Energetica (Progetto finale — Aulab)</h3>
                     <p><strong>Dataset:</strong> Dati EEA su emissioni e produzione di energia rinnovabile (Europa/Italia)</p>
                     <p><strong>Attività:</strong> Pulizia dati, EDA, analisi temporale, creazione di visualizzazioni e dashboard previsionali</p>
                     <p><strong>Strumenti:</strong> Python (pandas, numpy, Jupyter, matplotlib, statsmodels), Canva</p>
+                    <p>
+                        <a href="https://public.tableau.com/app/profile/marvin.di.vincenzi/viz/progettoaulab/Storia1" target="_blank">Vedi su Tableau</a>
+                        <a href="https://www.canva.com/design/DAGo7dpwDbw/bBMIl8cu4TTtfmDz3FVToQ/edit" target="_blank" style="background:#00897B;">Presentazione Canva</a>
+                    </p>
                 </div>
-
                 <div class="project">
                     <h3>Analisi Vendite PRESTO.IT (Progetto Aulab)</h3>
                     <p><strong>Attività:</strong> Interrogazioni SQL, analisi vendite, identificazione top products, definizione KPI, dashboard Tableau Public</p>
                     <p><strong>Strumenti:</strong> SQL (MySQL), Tableau Public</p>
                 </div>
-
                 <div class="project">
                     <h3>Analisi Accessi e Performance Territoriali — ASL Firenze</h3>
                     <p><strong>Attività:</strong> Integrazione dataset operativi, pseudonimizzazione, KPI territoriali, visualizzazioni geospaziali</p>
@@ -234,7 +289,6 @@
         </div>
     </div>
 
-
 <script src="https://cdn.botpress.cloud/webchat/v3.3/inject.js"></script>
 <style>
   #webchat .bpWebchat {
@@ -244,15 +298,12 @@
     max-height: 100%;
     max-width: 100%;
   }
-
   #webchat .bpFab {
     display: none;
   }
 </style>
-
 <!-- Put this on your page BEFORE the script below -->
 <div id="webchat" style="width: 500px; height: 500px;"></div>
-
 <!-- In your <body> tag -->
 <script>
   window.botpress.on("webchat:ready", () => {
@@ -289,7 +340,5 @@
   "selector": "#webchat"
 });
 </script>
-
-
 </body>
 </html>
