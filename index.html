@@ -156,29 +156,43 @@
     </style>
 </head>
 <body>
-  <audio id="bgMusic" src="https://github.com/Marvin-Data/marvin-cv-ai/raw/main/unbreakableresolve.mp3" autoplay loop style="display:none;"></audio>
+  <audio id="bgMusic" src="https://github.com/Marvin-Data/marvin-cv-ai/raw/main/unbreakableresolve.mp3" loop></audio>
 
-<!-- Pulsante per attivare/disattivare audio -->
-<button id="muteMusicBtn"
-  style="position:fixed; top:35px; right:38px; z-index:99; background:#667eea; color:#fff; border:none; border-radius:22px; padding:10px 24px; box-shadow:0 2px 22px #764ba230; cursor:pointer;">
-  🔊 Musica ON/OFF
-</button>
+  <button id="musicStartBtn"
+    style="position:fixed; top:35px; right:180px; z-index:99; background:#3daefb; color:#fff; border:none; border-radius:18px; padding:10px 20px; font-size: 1rem; box-shadow:0 2px 8px #764ba220; cursor:pointer;">
+    ▶️ Avvia musica
+  </button>
 
-<script>
-  const audio = document.getElementById("bgMusic");
-  const btn = document.getElementById("muteMusicBtn");
-  let isPlaying = true;
-  btn.onclick = function() {
-    if (isPlaying) {
-      audio.muted = true;
-      btn.innerHTML = "🔇 Musica OFF";
-    } else {
+  <button id="muteMusicBtn"
+    style="position:fixed; top:35px; right:38px; z-index:99; background:#667eea; color:#fff; border:none; border-radius:22px; padding:10px 24px; box-shadow:0 2px 22px #764ba230; cursor:pointer; display:none;">
+    🔊 Musica ON/OFF
+  </button>
+
+  <script>
+    const audio = document.getElementById("bgMusic");
+    const startBtn = document.getElementById("musicStartBtn");
+    const muteBtn = document.getElementById("muteMusicBtn");
+    let isPlaying = false;
+
+    startBtn.onclick = function() {
+      audio.play();
       audio.muted = false;
-      btn.innerHTML = "🔊 Musica ON";
-    }
-    isPlaying = !isPlaying;
-  };
-</script>
+      isPlaying = true;
+      startBtn.style.display = "none";
+      muteBtn.style.display = "inline-block";
+      muteBtn.innerHTML = "🔊 Musica ON";
+    };
+
+    muteBtn.onclick = function() {
+      if (isPlaying && !audio.paused) {
+        audio.pause();
+        muteBtn.innerHTML = "🔇 Musica OFF";
+      } else {
+        audio.play();
+        muteBtn.innerHTML = "🔊 Musica ON";
+      }
+    };
+  </script>
     <div class="container">
        <div class="header">
             <img src="https://github.com/Marvin-Data/marvin-cv-ai/raw/main/marvin%20curiculum%20-%20Copia.JPG" 
