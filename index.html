@@ -1,29 +1,4 @@
 <!DOCTYPE html>
-<!-- Player audio nascosto -->
-<audio id="bgMusic" src="unbreakableresolve.mp3" autoplay loop style="display:none;"></audio>
-
-<!-- Pulsante per attivare/disattivare audio -->
-<button id="muteMusicBtn"
-  style="position:fixed; top:35px; right:38px; z-index:99; background:#667eea; color:#fff; border:none; border-radius:22px; padding:10px 24px; box-shadow:0 2px 22px #764ba230; cursor:pointer;">
-  🔊 Musica ON/OFF
-</button>
-
-<script>
-  const audio = document.getElementById("bgMusic");
-  const btn = document.getElementById("muteMusicBtn");
-  let isPlaying = true;
-  btn.onclick = function() {
-    if (isPlaying) {
-      audio.muted = true;
-      btn.innerHTML = "🔇 Musica OFF";
-    } else {
-      audio.muted = false;
-      btn.innerHTML = "🔊 Musica ON";
-    }
-    isPlaying = !isPlaying;
-  };
-</script>
-
 <html lang="it">
 <head>
     <meta charset="UTF-8">
@@ -181,6 +156,29 @@
     </style>
 </head>
 <body>
+  <audio id="bgMusic" src="unbreakableresolve.mp3" autoplay loop style="display:none;"></audio>
+
+<!-- Pulsante per attivare/disattivare audio -->
+<button id="muteMusicBtn"
+  style="position:fixed; top:35px; right:38px; z-index:99; background:#667eea; color:#fff; border:none; border-radius:22px; padding:10px 24px; box-shadow:0 2px 22px #764ba230; cursor:pointer;">
+  🔊 Musica ON/OFF
+</button>
+
+<script>
+  const audio = document.getElementById("bgMusic");
+  const btn = document.getElementById("muteMusicBtn");
+  let isPlaying = true;
+  btn.onclick = function() {
+    if (isPlaying) {
+      audio.muted = true;
+      btn.innerHTML = "🔇 Musica OFF";
+    } else {
+      audio.muted = false;
+      btn.innerHTML = "🔊 Musica ON";
+    }
+    isPlaying = !isPlaying;
+  };
+</script>
     <div class="container">
        <div class="header">
             <img src="https://github.com/Marvin-Data/marvin-cv-ai/raw/main/marvin%20curiculum%20-%20Copia.JPG" 
