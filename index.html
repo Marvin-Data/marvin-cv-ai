@@ -134,13 +134,7 @@
         }
         .skill-graphic {
             text-align: center;
-            margin-bottom: 16px;
-        }
-        .skill-graphic img {
-            width: 180px;
-            border-radius: 16px;
-            box-shadow: 0 1px 10px #764ba240;
-            margin-bottom: 8px;
+            margin-bottom: 30px;
         }
         @media (max-width: 768px) {
             .header h1 {
@@ -152,28 +146,29 @@
             .header {
                 padding: 20px 10px 8px 10px;
             }
+            .skill-graphic img {
+                width: 94vw;
+                max-width: 98vw;
+            }
         }
     </style>
 </head>
 <body>
+  <!-- Player audio + bottoni musica -->
   <audio id="bgMusic" src="https://github.com/Marvin-Data/marvin-cv-ai/raw/main/unbreakableresolve.mp3" loop></audio>
-
   <button id="musicStartBtn"
     style="position:fixed; top:35px; right:180px; z-index:99; background:#3daefb; color:#fff; border:none; border-radius:18px; padding:10px 20px; font-size: 1rem; box-shadow:0 2px 8px #764ba220; cursor:pointer;">
     ▶️ Avvia musica
   </button>
-
   <button id="muteMusicBtn"
     style="position:fixed; top:35px; right:38px; z-index:99; background:#667eea; color:#fff; border:none; border-radius:22px; padding:10px 24px; box-shadow:0 2px 22px #764ba230; cursor:pointer; display:none;">
     🔊 Musica ON/OFF
   </button>
-
   <script>
     const audio = document.getElementById("bgMusic");
     const startBtn = document.getElementById("musicStartBtn");
     const muteBtn = document.getElementById("muteMusicBtn");
     let isPlaying = false;
-
     startBtn.onclick = function() {
       audio.play();
       audio.muted = false;
@@ -182,7 +177,6 @@
       muteBtn.style.display = "inline-block";
       muteBtn.innerHTML = "🔊 Musica ON";
     };
-
     muteBtn.onclick = function() {
       if (isPlaying && !audio.paused) {
         audio.pause();
@@ -193,6 +187,7 @@
       }
     };
   </script>
+
     <div class="container">
        <div class="header">
             <img src="https://github.com/Marvin-Data/marvin-cv-ai/raw/main/marvin%20curiculum%20-%20Copia.JPG" 
@@ -211,71 +206,76 @@
             </div>
 
             <div class="section">
-  <h2>📞 Contatti</h2>
-  <div class="contact-info">
-    <!-- ... altri contatti ... -->
-    <div class="contact-item">
-      <strong>Fiverr:</strong>
-      <a href="https://it.fiverr.com/marvin_data" target="_blank" style="color:#1dbf73; font-weight:600;">
-        Profilo Fiverr
-      </a>
-    </div>
-  </div>
-</div>
-
-<div class="section">
-  <h2>👨‍💼 Profilo</h2>
-  <p>Data Analyst junior con background operativo nel retail e formazione in Python, SQL e Business Intelligence...</p>
-</div>
-
-<div class="section">
-  <h2>💻 Competenze Principali</h2>
-  <div class="skill-graphic" style="text-align:center; margin-bottom:22px;">
-    <!-- Inizio blocco immagine Data Analysis & Visualization -->
-   <div style="text-align:center; margin:30px 0 18px 0;">
-  <img src="https://github.com/Marvin-Data/marvin-cv-ai/raw/main/Data-Analysis-Visualization.jpg"
-       alt="Data Analysis & Visualization"
-       style="width:420px; max-width:100%; border-radius:18px; box-shadow:0 4px 18px #764ba220;">
-  <div style="color:#764ba2; font-weight:500; margin-top:10px; font-size:1.1em;">
-    Data Analysis & Visualization (by Marvin Data)
-  </div>
-</div>  </div>
-    <!-- Fine blocco immagine -->
-    <!-- ... skills-grid ecc ... -->
-  </div>
-</div>
-
-
-                <div class="skills-grid">
-                    <div class="skill-item">
-                        <strong>Python</strong><br>
-                        pandas, numpy, Jupyter, matplotlib<br>
-                        <em>Livello: Intermedio</em>
-                    </div>
-                    <div class="skill-item">
-                        <strong>SQL</strong><br>
-                        MySQL<br>
-                        <em>Livello: Intermedio</em>
-                    </div>
-                    <div class="skill-item">
-                        <strong>Data Analysis</strong><br>
-                        Data cleaning, EDA, feature engineering
-                    </div>
-                    <div class="skill-item">
-                        <strong>Visualizzazione</strong><br>
-                        Tableau, Power BI<br>
-                        <em>Livello: Buono/Intermedio</em>
-                    </div>
-                    <div class="skill-item">
-                        <strong>Time Series</strong><br>
-                        Forecasting<br>
-                        <em>Livello: Base/Intermedio</em>
-                    </div>
-                    <div class="skill-item">
-                        <strong>Altri Strumenti</strong><br>
-                        Excel, Git, Canva
-                    </div>
+              <h2>📞 Contatti</h2>
+              <div class="contact-info">
+                <div class="contact-item">
+                  <strong>Telefono:</strong> +39 393 220 3067
                 </div>
+                <div class="contact-item">
+                  <strong>Email:</strong> <a href="mailto:marvin.divincenzi@gmail.com" style="color:#667eea;">marvin.divincenzi@gmail.com</a>
+                </div>
+                <div class="contact-item">
+                  <strong>Località:</strong> Roma / Macerata, Italia
+                </div>
+                <div class="contact-item">
+                  <strong>LinkedIn:</strong> <a href="#" style="color: #667eea;">Profilo LinkedIn</a>
+                </div>
+                <div class="contact-item">
+                  <strong>Fiverr:</strong>
+                  <a href="https://it.fiverr.com/marvin_data" target="_blank" style="color:#1dbf73; font-weight:600;">
+                    Profilo Fiverr
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="section">
+              <h2>👨‍💼 Profilo</h2>
+              <p>Data Analyst junior con background operativo nel retail e formazione in Python, SQL e Business Intelligence...</p>
+            </div>
+
+            <div class="section">
+              <h2>💻 Competenze Principali</h2>
+              <div class="skill-graphic">
+                <div style="text-align:center; margin:30px 0 18px 0;">
+                  <img src="https://github.com/Marvin-Data/marvin-cv-ai/raw/main/Data-Analysis-Visualization.jpg"
+                       alt="Data Analysis & Visualization"
+                       style="width:520px; max-width:96%; border-radius:18px; box-shadow:0 4px 18px #764ba220;">
+                  <div style="color:#764ba2; font-weight:500; margin-top:10px; font-size:1.1em;">
+                    Data Analysis & Visualization (by Marvin Data)
+                  </div>
+                </div>
+              </div>
+              <div class="skills-grid">
+                <div class="skill-item">
+                  <strong>Python</strong><br>
+                  pandas, numpy, Jupyter, matplotlib<br>
+                  <em>Livello: Intermedio</em>
+                </div>
+                <div class="skill-item">
+                  <strong>SQL</strong><br>
+                  MySQL<br>
+                  <em>Livello: Intermedio</em>
+                </div>
+                <div class="skill-item">
+                  <strong>Data Analysis</strong><br>
+                  Data cleaning, EDA, feature engineering
+                </div>
+                <div class="skill-item">
+                  <strong>Visualizzazione</strong><br>
+                  Tableau, Power BI<br>
+                  <em>Livello: Buono/Intermedio</em>
+                </div>
+                <div class="skill-item">
+                  <strong>Time Series</strong><br>
+                  Forecasting<br>
+                  <em>Livello: Base/Intermedio</em>
+                </div>
+                <div class="skill-item">
+                  <strong>Altri Strumenti</strong><br>
+                  Excel, Git, Canva
+                </div>
+              </div>
             </div>
 
             <div class="section">
@@ -349,9 +349,7 @@
     display: none;
   }
 </style>
-<!-- Put this on your page BEFORE the script below -->
 <div id="webchat" style="width: 500px; height: 500px;"></div>
-<!-- In your <body> tag -->
 <script>
   window.botpress.on("webchat:ready", () => {
     window.botpress.open();
